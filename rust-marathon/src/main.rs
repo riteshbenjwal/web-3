@@ -66,6 +66,8 @@ fn main() {
 
 // Implementing Structs
 
+
+/* 
 struct Rect {
     width: i32,
     height: i32,
@@ -96,3 +98,27 @@ fn main() {
     // println!("debug is {}", Rect::debug());
     println!("debug is {}", Rect::debug());
 }
+    
+*/
+
+// Enum
+
+enum Shape  {
+    Circle(f64),
+    Rectangle(f64, f64)
+}
+
+fn main(){
+    let rect = Shape::Rectangle(1.0, 2.0);
+    calculate_area(rect);
+    let circle = Shape::Circle(1.0);
+    calculate_area(circle);
+}
+ 
+ fn calculate_area(shape:Shape) -> f64 {
+  let area =  match shape {
+        Shape::Rectangle(a,b) => a * b,
+        Shape::Circle(r) => 3.14 * r * r
+    };
+    return area;
+ }
