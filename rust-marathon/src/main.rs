@@ -1,3 +1,12 @@
+// mod option;
+mod result;
+
+fn main() {
+    // option::main();
+    result::main();
+}
+
+
 /*
 
 fn main() {
@@ -103,6 +112,8 @@ fn main() {
 
 // Enum
 
+
+/*
 enum Shape  {
     Circle(f64),
     Rectangle(f64, f64)
@@ -122,3 +133,5 @@ fn main(){
     };
     return area;
  }
+
+*/
