@@ -61,8 +61,8 @@ async function createTokenMint(connection, payer) {
 
   const metadata = {
     mint: mint,
-    name: "Adventure-Test",
-    symbol: "ADCke",
+    name: "ESBKOL_12",
+    symbol: "ESBKOL_12",
     uri: "https://github.com/saidubundukamara/solana_meta_data/blob/main/metadata.json",
     additionalMetadata: [["description", "Only Possible On Solana"]],
   };
@@ -84,8 +84,8 @@ async function createTokenMint(connection, payer) {
     }),
     createInitializeTransferFeeConfigInstruction(
       mint,
-      transferFeeConfigAuthority.publicKey,
-      withdrawWithheldAuthority.publicKey,
+      payer.publicKey,
+      payer.publicKey,
       FEE_BASIS_POINTS,
       MAX_FEE,
       TOKEN_2022_PROGRAM_ID
