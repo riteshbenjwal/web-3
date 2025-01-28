@@ -61,8 +61,8 @@ async function createTokenMint(connection, payer) {
 
   const metadata = {
     mint: mint,
-    name: "ESBKOL_12",
-    symbol: "ESBKOL_12",
+    name: "DEFI_ADMIN_HERE",
+    symbol: "DEFI_ADMIN",
     uri: "https://github.com/saidubundukamara/solana_meta_data/blob/main/metadata.json",
     additionalMetadata: [["description", "Only Possible On Solana"]],
   };
@@ -160,7 +160,7 @@ async function initializeAccounts(connection, payer, mint) {
  * Mint tokens to the source account.
  */
 async function mintTokens(connection, payer, mint, sourceAccount) {
-  const mintAmount = BigInt(1_000_000_000);
+  const mintAmount = BigInt(1_000_000_000_000_000);
 
   await mintTo(
     connection,
