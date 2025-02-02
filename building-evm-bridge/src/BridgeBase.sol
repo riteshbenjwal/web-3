@@ -36,7 +36,7 @@ contract BridgeBase is Ownable {
         _tokenAddress.mint(msg.sender, _amount);
     }
 
-    function burnedOnOppositeChain(address userAccount, uint256 _amount) public onlyOwner {
+    function depositedOnOppositeChain(address userAccount, uint256 _amount) public onlyOwner {
         pendingBalance[userAccount] += _amount;
     }
 }
